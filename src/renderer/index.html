@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+  <title>Process Raid Guild</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="crest" aria-hidden="true">⚔</span><div><strong>PROCESS RAID GUILD</strong><small id="machineName">로컬 길드 연결 중…</small></div></div>
+      <div class="telemetry" aria-label="실시간 시스템 상태">
+        <div class="chip"><span>CPU</span><b id="cpuValue">--</b></div>
+        <div class="chip"><span>MEM</span><b id="memoryValue">--</b></div>
+        <div class="chip"><span>GPU</span><b id="gpuValue">--</b></div>
+        <div class="chip"><span>PROC</span><b id="processValue">--</b></div>
+      </div>
+      <div class="actions">
+        <button id="soundBtn" type="button" aria-pressed="false">♪ SOUND OFF</button>
+        <button id="refreshBtn" type="button">↻ 정찰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="battle-panel" aria-label="실시간 프로세스 전투 시각화">
+        <div class="panel-heading">
+          <div><span class="eyebrow">LIVE EXPEDITION</span><h1>오늘의 업무 토벌전</h1></div>
+          <div class="live-badge"><i></i><span id="liveText">연결 중</span></div>
+        </div>
+        <div class="canvas-frame"><canvas id="raidCanvas" aria-label="앱 헌터들이 프로세스 몬스터와 싸우는 픽셀 전장"></canvas><div class="scanlines"></div></div>
+        <div class="legend"><span><i class="dot hunter"></i>작업 앱 헌터</span><span><i class="dot boss"></i>고부하 프로세스</span><span><i class="dot rest"></i>유휴·전투 준비</span><span class="privacy">명령 내용은 숨김 · 물자 교환은 동시 활동 기반 게임 연출</span></div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="guild-card">
+          <div class="section-title"><span>길드 현황</span><b id="updatedAt">--:--:--</b></div>
+          <div class="summary-grid"><div><strong id="hunterCount">0</strong><span>출전 헌터</span></div><div><strong id="bossCount">0</strong><span>발견 몬스터</span></div><div><strong id="comboCount">0</strong><span>협공 인원</span></div></div>
+        </section>
+        <section class="roster-card">
+          <div class="section-title"><span>원정대 명부</span><b>CPU / RAM</b></div>
+          <div id="roster" class="roster"><div class="empty">실제 앱을 정찰하고 있습니다…</div></div>
+        </section>
+        <section class="quest-log">
+          <div class="section-title"><span>전투 기록</span><b>LOCAL</b></div>
+          <ol id="questLog"><li><time>--:--</time><span>길드 관제실을 준비하는 중…</span></li></ol>
+        </section>
+        <section class="truth-note"><strong>표현 규칙</strong><p>공격력은 실제 CPU 활동과 메모리 사용량을 게임식으로 변환한 지표입니다. 이동·협공·물자 전달은 동시에 활동하는 앱들의 관계를 보여주는 연출이며 실제 앱 간 파일 전송이나 생산성 판정이 아닙니다.</p></section>
+      </aside>
+    </main>
+    <footer><span>실시간 로컬 관제 · 외부 서버 전송 없음</span><span id="versionText">v0.1.0</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
