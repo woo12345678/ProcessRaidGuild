@@ -1,6 +1,6 @@
 {
   "name": "process-raid-guild",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Turn real computer processes into a cooperative pixel-art raid dashboard.",
   "main": "src/main.js",
   "author": "Hyunwoo Jung",
@@ -22,9 +22,27 @@
     "appId": "com.processraid.guild",
     "productName": "Process Raid Guild",
     "asar": true,
-    "files": ["src/**/*", "package.json", "README.md", "LICENSE"],
-    "directories": {"output": "release"},
-    "win": {"target": ["portable", "nsis"], "icon": "build/icon.ico", "artifactName": "Process-Raid-Guild-${version}-${arch}.${ext}"},
-    "nsis": {"oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true}
+    "files": [
+      "src/**/*",
+      "package.json",
+      "README.md",
+      "LICENSE"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "Process-Raid-Guild-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
   }
 }
