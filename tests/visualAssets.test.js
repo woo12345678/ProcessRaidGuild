@@ -19,4 +19,19 @@ test('cinematic raid backdrop is bundled and referenced by the renderer', () => 
   assert.match(renderer, /function drawHunterEmblem/);
   assert.match(renderer, /function drawMonsterAura/);
   assert.match(renderer, /function drawImpactEffects/);
+
+  const hunterTypes = ['engine', 'ai', 'forge', 'artist', 'scout', 'worker'];
+  const monsterTypes = ['boss', 'elite', 'mob'];
+  for (const type of hunterTypes) {
+    const sprite = path.join(root, 'src', 'renderer', 'assets', 'hunters', `${type}.svg`);
+    assert.equal(fs.existsSync(sprite), true, `missing hunter sprite: ${type}`);
+    assert.match(fs.readFileSync(sprite, 'utf8'), /viewBox="0 0 160 200"/);
+  }
+  for (const type of monsterTypes) {
+    const sprite = path.join(root, 'src', 'renderer', 'assets', 'monsters', `${type}.svg`);
+    assert.equal(fs.existsSync(sprite), true, `missing monster sprite: ${type}`);
+    assert.match(fs.readFileSync(sprite, 'utf8'), /viewBox="0 0 260 220"/);
+  }
+  assert.match(renderer, /hunterSprites/);
+  assert.match(renderer, /monsterSprites/);
 });

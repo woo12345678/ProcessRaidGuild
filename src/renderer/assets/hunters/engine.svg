@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+<defs><linearGradient id="armor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd36a"/><stop offset=".25" stop-color="#b83f32"/><stop offset="1" stop-color="#27384d"/></linearGradient><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f0da"/><stop offset=".35" stop-color="#91a0a6"/><stop offset="1" stop-color="#313944"/></linearGradient><radialGradient id="aura"><stop stop-color="#ffd36a" stop-opacity=".42"/><stop offset="1" stop-color="#ffd36a" stop-opacity="0"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<ellipse cx="80" cy="184" rx="47" ry="11" fill="#05070a" opacity=".55"/><ellipse cx="80" cy="104" rx="67" ry="81" fill="url(#aura)"/>
+<path d="M45 80Q80 51 116 80l14 76-47 28-52-28z" fill="#27384d" stroke="#14141b" stroke-width="7"/>
+<path d="M55 89l25-18 28 18 10 62-37 21-39-21z" fill="url(#armor)" stroke="#191821" stroke-width="6"/>
+<path d="M50 91L27 106l10 37 24-16zM110 90l25 15-11 38-24-17z" fill="#b83f32" stroke="#191821" stroke-width="6"/>
+<path d="M59 148l-7 35h24l5-36M100 148l8 35H84l-3-36" fill="#252631" stroke="#14151c" stroke-width="6"/>
+<path d="M55 76V42q25-27 51 0v34z" fill="#e7ad81" stroke="#17151a" stroke-width="7"/>
+<path d="M49 49q31-42 63 0v17l-15-13-42 12z" fill="#27384d" stroke="#17151a" stroke-width="7"/>
+<path d="M61 55h13v7H61zM88 55h13v7H88z" fill="#ffd36a"/><path d="M75 70h15" stroke="#5d302a" stroke-width="4"/>
+<path d="M49 94l31 20 34-20" fill="none" stroke="#ffd36a" stroke-width="5"/><circle cx="80" cy="115" r="13" fill="#27384d" stroke="#ffd36a" stroke-width="5"/><circle cx="80" cy="115" r="4" fill="#fff7cd"/>
+<g id="gear"><path d="M118 88l23 7 7 39-24 16-19-22z" fill="url(#metal)" stroke="#171923" stroke-width="6"/><path d="M124 98l13 4 5 27-14 10-12-16z" fill="#c94838"/><path d="M128 101v32M116 117h25" stroke="#ffe09a" stroke-width="5"/><path d="M34 95l-19 9-2 45 25 9 17-34z" fill="#26384e" stroke="#171923" stroke-width="6"/><path d="M21 113l24-9v39l-24 7z" fill="#a93631"/><path d="M82 66l12-40 8 43" stroke="#edf4f4" stroke-width="8"/><path d="M94 27l6-15 8 18" fill="#ffd36a"/></g>
+<g opacity=".75"><path d="M49 87l12 4M101 86l12 5M61 157l13 4M88 158l13 3" stroke="#fff" stroke-width="3"/></g>
+</svg>

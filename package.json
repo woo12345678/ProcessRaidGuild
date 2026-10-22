@@ -1,6 +1,6 @@
 {
   "name": "process-raid-guild",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Turn real computer processes into a cooperative pixel-art raid dashboard.",
   "main": "src/main.js",
   "author": "Hyunwoo Jung",
@@ -16,7 +16,12 @@
   },
   "devDependencies": {
     "electron": "^44.7.0",
-    "electron-builder": "^26.15.3"
+    "electron-builder": "26.15.3"
+  },
+  "overrides": {
+    "app-builder-lib": {
+      "@electron/get": "5.1.0"
+    }
   },
   "build": {
     "appId": "com.processraid.guild",
